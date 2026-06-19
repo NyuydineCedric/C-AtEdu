@@ -1,81 +1,8 @@
+
 {
-  "teachers": [
-    {
-      "id": "T001",
-      "name": "Dr. Isabelle Nkeng",
-      "email": "isabelle@catedu.edu",
-      "password": "teacher123",
-      "phone": "+237 677 123 456",
-      "department": "Life Sciences",
-      "institution": "University of Bamenda",
-      "subject": "Biology",
-      "avatar": "IN",
-      "courses": ["C001", "C003"],
-      "notifications": [
-        { "id": "N001", "type": "enrollment", "message": "Alice Mbah enrolled in Biology: Cell Biology", "studentId": "S001", "courseId": "C001", "read": false, "date": "2025-04-18T09:00:00Z" },
-        { "id": "N002", "type": "enrollment", "message": "Boris Tabi enrolled in Biology: Cell Biology", "studentId": "S002", "courseId": "C001", "read": false, "date": "2025-04-18T10:00:00Z" },
-        { "id": "N003", "type": "enrollment", "message": "Esther Njong enrolled in Biology: Cell Biology", "studentId": "S005", "courseId": "C001", "read": true, "date": "2025-04-19T08:00:00Z" }
-      ]
-    },
-    {
-      "id": "T002",
-      "name": "Mr. Paul Fontem",
-      "email": "paul@catedu.edu",
-      "password": "teacher123",
-      "phone": "+237 699 987 654",
-      "department": "Mathematics",
-      "institution": "University of Bamenda",
-      "subject": "Mathematics",
-      "avatar": "PF",
-      "courses": ["C002"],
-      "notifications": [
-        { "id": "N004", "type": "enrollment", "message": "Clara Fon enrolled in Mathematics: Algebra", "studentId": "S003", "courseId": "C002", "read": false, "date": "2025-04-20T11:00:00Z" },
-        { "id": "N005", "type": "enrollment", "message": "David Etah enrolled in Mathematics: Algebra", "studentId": "S004", "courseId": "C002", "read": true, "date": "2025-04-21T09:00:00Z" }
-      ]
-    }
-  ],
-  "students": [
-    { "id": "S001", "matricule": "UBa24PB180", "name": "Alice Mbah", "email": "alice@student.edu", "password": "student123", "phone": "+237 670 111 222", "level": "200L", "department": "Biochemistry", "institution": "University of Bamenda", "enrolledCourses": ["C001"] },
-    { "id": "S002", "matricule": "UBa24PB181", "name": "Boris Tabi", "email": "boris@student.edu", "password": "student123", "phone": "+237 670 333 444", "level": "200L", "department": "Biochemistry", "institution": "University of Bamenda", "enrolledCourses": ["C001"] },
-    { "id": "S003", "matricule": "UBa24CS101", "name": "Clara Fon", "email": "clara@student.edu", "password": "student123", "phone": "+237 670 555 666", "level": "100L", "department": "Computer Science", "institution": "University of Bamenda", "enrolledCourses": ["C002"] },
-    { "id": "S004", "matricule": "UBa23MT220", "name": "David Etah", "email": "david@student.edu", "password": "student123", "phone": "+237 670 777 888", "level": "300L", "department": "Mathematics", "institution": "University of Bamenda", "enrolledCourses": ["C002"] },
-    { "id": "S005", "matricule": "UBa24PB182", "name": "Esther Njong", "email": "esther@student.edu", "password": "student123", "phone": "+237 670 999 000", "level": "200L", "department": "Biochemistry", "institution": "University of Bamenda", "enrolledCourses": ["C001"] }
-  ],
-  "courses": [
-    { "id": "C001", "teacherId": "T001", "title": "Cell Biology", "subject": "Biology", "code": "BIO201", "level": "200L", "description": "Fundamental concepts of cell structure, organelles, and biological processes.", "enrolledStudents": ["S001", "S002", "S005"] },
-    { "id": "C002", "teacherId": "T002", "title": "Algebra", "subject": "Mathematics", "code": "MAT101", "level": "100L", "description": "Introduction to algebraic structures, equations and functions.", "enrolledStudents": ["S003", "S004"] },
-    { "id": "C003", "teacherId": "T001", "title": "Genetics", "subject": "Biology", "code": "BIO301", "level": "300L", "description": "Principles of heredity, DNA, and genetic variation.", "enrolledStudents": [] }
-  ],
-  "exams": [
-    {
-      "id": "E001", "teacherId": "T001", "courseId": "C001",
-      "title": "Cell Structure Mid-Semester", "subject": "Biology",
-      "description": "Mid-semester test on cell biology fundamentals",
-      "duration": 30, "status": "published", "createdAt": "2025-04-18", "aiGenerated": false,
-      "questions": [
-        { "id": "Q1", "text": "What is the powerhouse of the cell?", "options": ["Nucleus","Mitochondria","Ribosome","Golgi Apparatus"], "correct": 1, "solution": "The mitochondria produces ATP through cellular respiration, supplying energy to the cell." },
-        { "id": "Q2", "text": "Which organelle contains the genetic information of a cell?", "options": ["Mitochondria","Lysosome","Nucleus","Vacuole"], "correct": 2, "solution": "The nucleus houses the cell's DNA and directs all cellular activities via the nuclear envelope." },
-        { "id": "Q3", "text": "What structure controls what enters and exits the cell?", "options": ["Cell wall","Cell membrane","Cytoplasm","Endoplasmic reticulum"], "correct": 1, "solution": "The cell membrane is selectively permeable, regulating movement of substances in and out of the cell." },
-        { "id": "Q4", "text": "Which organelle is responsible for protein synthesis?", "options": ["Golgi body","Ribosome","Lysosome","Vacuole"], "correct": 1, "solution": "Ribosomes translate mRNA into proteins and can be free in the cytoplasm or on the rough ER." },
-        { "id": "Q5", "text": "What do plant cells have that animal cells do not?", "options": ["Mitochondria","Nucleus","Cell wall and chloroplasts","Ribosomes"], "correct": 2, "solution": "Plant cells uniquely have a rigid cell wall (cellulose) and chloroplasts for photosynthesis." }
-      ]
-    },
-    {
-      "id": "E002", "teacherId": "T002", "courseId": "C002",
-      "title": "Algebra Fundamentals Quiz", "subject": "Mathematics",
-      "description": "Basic algebra: equations, functions and simplification",
-      "duration": 45, "status": "published", "createdAt": "2025-04-20", "aiGenerated": false,
-      "questions": [
-        { "id": "Q1", "text": "Solve for x: 2x + 6 = 14", "options": ["x = 2","x = 3","x = 4","x = 10"], "correct": 2, "solution": "Subtract 6: 2x = 8. Divide by 2: x = 4." },
-        { "id": "Q2", "text": "What is the value of 3² + 4²?", "options": ["25","49","12","14"], "correct": 0, "solution": "3² = 9 and 4² = 16. Sum = 25. This is a 3-4-5 Pythagorean triple." },
-        { "id": "Q3", "text": "Simplify: 5(x + 3) − 2x", "options": ["3x + 15","7x + 15","3x + 3","5x + 3"], "correct": 0, "solution": "Distribute: 5x + 15 − 2x = 3x + 15." },
-        { "id": "Q4", "text": "If f(x) = 2x − 1, what is f(5)?", "options": ["8","9","10","11"], "correct": 1, "solution": "Substitute: f(5) = 2(5) − 1 = 10 − 1 = 9." }
-      ]
-    }
-  ],
-  "submissions": [
-    { "id": "SUB001", "examId": "E001", "studentId": "S001", "answers": [1,2,1,1,2], "score": 5, "total": 5, "submittedAt": "2025-04-22T10:30:00Z" },
-    { "id": "SUB002", "examId": "E001", "studentId": "S002", "answers": [1,2,0,1,2], "score": 4, "total": 5, "submittedAt": "2025-04-22T11:05:00Z" },
-    { "id": "SUB003", "examId": "E002", "studentId": "S003", "answers": [2,0,0,1], "score": 4, "total": 4, "submittedAt": "2025-04-23T09:00:00Z" }
-  ]
+  "teachers": [],
+  "students": [],
+  "courses": [],
+  "exams": [],
+  "submissions": []
 }

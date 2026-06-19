@@ -29,7 +29,9 @@ const LEVELS = [
 ];
 const DIFFICULTIES = ["Easy", "Medium", "Hard", "Mixed"];
 
-const PROXY_URL = "http://localhost:3001/api/generate";
+// Relative path — works locally (Vite proxies /api to localhost:3001)
+// AND on Vercel (where /api/generate.js runs as a serverless function)
+const PROXY_URL = "/api/generate";
 
 async function callCedric({ topic, subject, level, difficulty, numQuestions }) {
   const prompt = `You are Cedric, an expert academic MCQ exam creator.
@@ -126,7 +128,7 @@ export default function CedricAI({
         msg.includes("NetworkError")
       ) {
         setErrMsg(
-          'Cannot reach the proxy. Make sure you started with "npm start".',
+          'Cannot reach the AI service. If running locally, make sure you started with "npm start".',
         );
       } else {
         setErrMsg(msg || "Something went wrong. Please try again.");
