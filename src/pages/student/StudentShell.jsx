@@ -13,7 +13,7 @@ import StudentExams from "./StudentExams";
 import TakeExam from "./TakeExam";
 import StudentResults from "./StudentResults";
 import StudentCourses from "./StudentCourses";
-import StudentRankings from "./StudentRankings";
+import StudentRankings from "./Studentrankings";
 
 const NAV = [
   { id: "dashboard", icon: LayoutDashboard, label: "Dashboard" },
